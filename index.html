@@ -57,6 +57,7 @@
   @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-100%);}}
   @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.25;}}
   @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
     .ticker-track{animation:none; padding-left:16px;}
     .dot{animation:none;}
   }
@@ -122,10 +123,13 @@
     font-size:12px;
     font-weight:400;
   }
-  .hero-partner-link:hover,
+  .hero-partner-link:hover{
+    background:var(--paper-raise);
+  }
   .hero-partner-link:focus-visible{
     background:var(--paper-raise);
-    outline:2px solid transparent;
+    outline:3px solid var(--amber-deep);
+    outline-offset:3px;
   }
 
   section{
